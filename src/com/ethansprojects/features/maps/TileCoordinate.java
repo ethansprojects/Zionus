@@ -1,0 +1,33 @@
+package com.ethansprojects.features.maps;
+
+/**
+ * Configures tile coordinates for entities.
+ * @author ethansprojects
+ */
+
+public class TileCoordinate {
+	
+	private int x, y;
+	private final int TILE_SIZE = 16;
+	
+	public TileCoordinate(int x, int y) {
+		this.x = x * TILE_SIZE;
+		this.y = y * TILE_SIZE;
+	}
+	
+	public int x() {
+		return x;
+	}
+	
+	public int y() {
+		return y;
+	}
+	
+	public int[] xy() {
+		int[] result = new int[2];
+		result[0] = x;
+		result[1] = y;
+		return result;
+	}
+	
+}
